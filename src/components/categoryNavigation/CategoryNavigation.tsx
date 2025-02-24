@@ -6,7 +6,7 @@ import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
-import { categories } from "../../lib/dummydata";
+import { categories } from "@/lib/dummyData";
 
 const CategoryNavigation = () => {
   // const categories = ["차트", "Whook", "이벤트", "뉴스", "스토어", "충전소"];
