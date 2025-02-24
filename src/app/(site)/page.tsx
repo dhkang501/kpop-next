@@ -1,12 +1,19 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import CategoryContent from "@/components/categoryContent/CategoryContent";
 import { useCategoryStore } from "@/store/useCategoryStore";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
+import { categories } from "@/lib/dummydata";
 
 export default function Home() {
   const { selectCategory, setCategory } = useCategoryStore();
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperClass | null>(null);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(selectCategory);
+    }
+  }, [selectCategory]);
 
   return (
     <Swiper
@@ -17,9 +24,11 @@ export default function Home() {
         setCategory(swiper.activeIndex);
       }}
     >
-      <SwiperSlide>
-        <CategoryContent categoryIndex={selectCategory} />
-      </SwiperSlide>
+      {categories.map((category, index) => (
+        <SwiperSlide key={index}>
+          <CategoryContent categoryIndex={index} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
