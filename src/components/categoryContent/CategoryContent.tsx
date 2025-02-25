@@ -20,7 +20,11 @@ const CategoryContent = ({ categoryIndex }: Props) => {
   const SelectedPage = categoryPage[categoryIndex];
   if (!SelectedPage) {
     // TODO: Error page
-    return <div>잘못된 카테고리입니다.</div>;
+    return (
+      <div style={{ height: "100vh", width: "100vh" }}>
+        잘못된 카테고리입니다.
+      </div>
+    );
   }
 
   return (

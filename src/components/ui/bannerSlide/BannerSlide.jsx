@@ -13,7 +13,7 @@ const BannerSlider = () => {
     <div className={styles.bannerContainer}>
       <Swiper
         loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        // autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination]}
         slidesPerView={1.5} // 3개 배너가 보이도록 설정

@@ -1,0 +1,60 @@
+@use "../../../styles/variables.scss" as *;
+
+.contentListWrapper {
+  height: 100%;
+  background-color: $light-grey-color;
+}
+
+.contentListContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1px 15px 10px 10px;
+
+  & > h4 {
+    padding-left: 5px;
+    position: sticky;
+    top: 0;
+    background-color: $light-grey-color;
+    z-index: 10;
+    padding: 10px 5px;
+  }
+}
+
+.contentListScroll {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+.contentList {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.imgBox {
+  width: 70px;
+  height: 50px;
+  background-color: $deep-grey-color;
+  border-radius: 8px;
+  position: relative;
+  left: 5px;
+}
+
+.listBox {
+  width: calc(100% - 60px);
+  padding: 10px;
+  background-color: $default-white-color;
+  border-radius: 0 4px 4px 0;
+}
+
+.loadingBox {
+  height: 30px;
+  background-color: $light-grey-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}

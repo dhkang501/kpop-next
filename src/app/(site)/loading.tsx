@@ -1,10 +1,8 @@
 "use client";
-import LodingBar from '@/components/LodingBar/LodingBar';
+import LodingBar from "@/components/LodingBar/LodingBar";
 
 const loding = () => {
-  return (
-    <LodingBar/>
-  )
-}
+  return <LodingBar />;
+};
 
-export default loding
+export default loding;
