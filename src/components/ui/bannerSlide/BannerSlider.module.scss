@@ -1,0 +1,77 @@
+@use "../../../styles/variables" as *;
+
+.bannerContainer {
+  width: 100%;
+  // max-width: 450px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.bannerSwiper {
+  padding-bottom: 30px;
+}
+
+.bannerSlide {
+  display: flex;
+  justify-content: center;
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bannerImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.ongoingBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: $deep-pink-color;
+  color: white;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.bannerContents {
+  width: 100%;
+  height: 100px;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  // display: flex;
+  // justify-content: space-between;
+  color: black;
+  box-sizing: border-box;
+}
+
+.bannerTitle {
+  max-width: 220px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.voteBadge {
+  height: 11px;
+  color: $deep-pink-color;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: 1px solid $deep-pink-color;
+}
+
+.currentTime {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 12px;
+}
